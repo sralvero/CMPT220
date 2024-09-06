@@ -18,7 +18,7 @@ public class Debug {
         //finish this one for me by receiving and printing the user's age back to them
         System.out.println("How old are you? ");
         // stores user input to age variable 
-        String age = sc.nextLine();
+        int age = sc.nextInt();
         // prints it back out 
         System.out.println("You are " + age + " years old!");
 
