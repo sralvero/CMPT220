@@ -8,10 +8,32 @@ import java.util.Scanner;
 * can be any topic you pick :) feel free to pick some obscure or niche topics!
 * good luck!
 * */
-public class Main {
+public class ifelsepractice {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
 
+        // in-class pause & plays 
+        Integer number = 4; 
+        if (number > 5) {
+            System.out.println("Too big!");
+        } else if (number > 0 && number < 5) {
+            System.out.println("Just right!");
+        } else {
+            System.out.println("Too small!");
+        }
+
+        System.out.println("How old are you?");
+        Integer age = sc.nextInt();
+        if (age >= 25) {
+            System.out.println("You can drink AND rent a car omg");
+        } else if (age >= 21 && age < 25) {
+            System.out.println("You can drink and get an uber");
+        } else if (age >= 18 && age < 21) {
+            System.out.println("you COULD have smoked but not anymore lmfao");
+        } else {
+            System.out.println("heres a soda pop");
+        }
 
     }
 }
