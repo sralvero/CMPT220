@@ -7,14 +7,16 @@ public class Debug {
         int var1 = 4;
         if (var1 > 4){
             System.out.println("Var1 is greater than 4");
-        }else{
+        } else if (var1 == 4) {
+            System.out.println("Var1 is 4");
+        } else {
             System.out.println("Var1 is less than 4");
         }
 
         int var2 = 6;
         if (var2 == 5){
             System.out.println("Var2 is 5");
-        } else if (var2 > 5){
+        } else if (var2 > 6){
             System.out.println("Var2 is greater than 5");
         } else if (var2 < 5){
             System.out.println("Var2 is less than 5");
@@ -25,6 +27,8 @@ public class Debug {
         int var3 = 5;
         if (var3 > 10){
             System.out.println("Var3 is greater than 10");
+        } else if (var3 == 10) {
+            System.out.println("Var3 is 10");
         } else {
             System.out.println("Var3 is less than 10");
         }
@@ -38,7 +42,9 @@ public class Debug {
         } else{
             System.out.println("Not marist college :(!");
         }
-
+        // Code in an if statement will only run if the condition is true 
+        // Here the condition is false from the beginning so the code inside 
+        // is never executed 
 
     }
 }
