@@ -82,7 +82,7 @@ public class LoopsDebug {
         System.out.println(reverse);
         
         /* mini-writeup: I did the loop challenge before this and this was the way I 
-        initially set upthe for loop for that (because I misread the prompt lol): 
+        initially set up the for loop for that (because I misread the prompt lol): 
         in reverse, with i decreasing from the word_length to 0. 
         The index has to be i - 1 as i runs from word_length to 1, but the character
         indexes of the strings run from (word_length - 1) to 0. */
