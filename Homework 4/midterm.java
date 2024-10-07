@@ -44,7 +44,7 @@ public class midterm {
          * (thinking I should make a list that is literally just the numbers 1-26)
          * 3. once 6 cases have been removed banker makes an offer that is probably
          * just the avg of the remaining cases. options are deal, no deal and 
-         * counteroffer (??? not doing that)
+         * counteroffer (???)
          * 4. if it declines your offer (or you choose no deal ig) you are then asked
          * to choose 5 cases 
          * 5. banker once again makes an offer. this time the value of the previous 
@@ -53,7 +53,7 @@ public class midterm {
          * 7. if you click deal it will tell you the value of the offer you just 
          * accepted + have you view the value of the case you selected at the start
          * 8. hilariously my case was worth $1 but my offer was $100k and I apparently
-         * "beat the banker". I have no idea what that means or how that happens 
+         * "beat the banker"  
          * 9. if you keep clicking no deal it will go to choose one case then deal/no
          * deal. if you still click no deal it keeps making you choose one case 
          * 10. when you get down to the last 2 it gives you an option to switch your 
