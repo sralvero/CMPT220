@@ -32,7 +32,7 @@ public class Loops {
         until it equals word_length, at which point the for loop will stop.
         I had to look up how to print a single character from the string, which Google 
         told me could be done with the .charAt(index) command. 
-        In a string, the first index is 0 and the last index is word_length - 1 
+        The first character in a string is at index 0 and the last is at word_length - 1 
         and as the loop will run from i = 0 to i = word_length - 1, you can just print
         word.charAt(i) in each iteration of the loop.
          */
