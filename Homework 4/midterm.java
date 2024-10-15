@@ -56,7 +56,7 @@ public class midterm {
             // repeating the same code for the first selected case
             userCase = sc.nextInt();
 
-            // displays the value of each chosen case to the user 
+            // displays the value of each chosen case to the user
             System.out.println("The value of case " + userCase + " was: $" + cases.get(caseNums.indexOf(userCase)));
             
             // updates both lists by removing the case value/number of the user's chosen case 
@@ -68,15 +68,13 @@ public class midterm {
 
         System.out.println();
         
-        // set up variables to calculate banker offer 
-        // banker offer formula is apparently a root mean square 
+        // set up variables to calculate banker offer (apparently a root mean square) 
         double offer = 0; 
         for (int i=0; i<cases.size(); i++) {
             offer += Math.pow(cases.get(i), 2);
         }
         offer = Math.ceil(Math.sqrt(offer/cases.size()));
 
-        // this is the part where the banker makes an offer 
         System.out.println("HELLO. i am the banker. i would like to make you an offer of $" + offer + ".");
         System.out.println("Type DEAL to accept. Type NO DEAL to keep playing.");
 
@@ -312,6 +310,8 @@ public class midterm {
             }
             offer = Math.ceil(Math.sqrt(offer/cases.size()));
 
+            // this is so that the banker doesn't make an offer when only one case is left,
+            // therefore revealing its value to the player
             if (cases.size() != 1) {
                 System.out.println("HELLO AGAIN. i am the banker. i would like to make you an offer of $" + offer + ".");
                 System.out.println("Type DEAL to accept. Type NO DEAL to keep playing.");
@@ -345,6 +345,8 @@ public class midterm {
             userChoice = sc.nextLine().toLowerCase();
         }
 
+        // final case scenario. whether the user switches the case or not, the program will 
+        // display the original case value and the other case number/value
         if (userChoice.equals("deal")) {
             System.out.println("You have switched to case " + caseNums.get(0) + " and won $" + cases.get(0) + ".");
             System.out.println("The case you originally picked contained $" + ogValue + ".");
