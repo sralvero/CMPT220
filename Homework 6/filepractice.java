@@ -11,19 +11,36 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class filepractice {
     public static void main(String[] args){
         //do you need something to start?
-        File inputfile = new File(/*what goes in here?*/);
+        List<String> list = new ArrayList<String>();
+        File inputfile = new File("/Users/sarahalvero/Downloads/practice.txt");
         try {
             Scanner input = new Scanner(inputfile);
             while(input.hasNext()){
                 //what do we do at every line of the file?
+                list.add(input.nextLine());
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
       //optional if you want to keep this, just to show what the indices are of the list you created
         System.out.println(list);
+
+        List<String> honors = new ArrayList<String>();
+        // traversing list to find GPAs over 3.5
+        for (int i=1; i<list.size(); i+=2) {
+            if (Double.parseDouble(list.get(i)) > 3.5) {
+                honors.add(list.get(i-1));
+            } 
+        }
+        System.out.println(honors);
+
+        var num=0;
+        for(int i=0; i<list.size(); i+=2) {
+            num++;
+        }
+        System.out.println("There are " + num + " names total.");
     }
 }
