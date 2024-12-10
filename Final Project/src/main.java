@@ -22,8 +22,7 @@ public class main {
         // enemyList should now contain the following items: "duende", "manananggal", 
         // "aswang", "bal-bal", "White Lady"
 
-
-        // intro text  
+  
         System.out.println();
         System.out.println("Welcome to this short Pinoy RPG!");
         System.out.println("To get started, choose one of these heroes whose journey you would like to follow.");
@@ -32,14 +31,14 @@ public class main {
 
         // creating example objects to display to user; the player's chosen character 
         // will be created later
-        playerChar ex = new playerChar("urduja");
+        playerChar char1 = new playerChar("urduja");
         System.out.println("1: URDUJA, THE WARRIOR. The legendary warrior princess and matriarch of Tawalisi. The leader of famed female warriors known as the Kinalakian, she never married, as she never met a man who could best her in a fight.");
         System.out.println("STYLE: Well-rounded. Trained in strategy. Equal on offense and defense.");
-        System.out.print("STATS: " + ex.atk);
+        System.out.print("STATS: " + char1.atk);
         getUnicode("2694");
-        System.out.print(" "+ex.def);
+        System.out.print(" "+char1.def);
         getUnicode("26E8");
-        System.out.print(" "+ex.hp);
+        System.out.print(" "+char1.hp);
         getUnicode("2661");
         System.out.println();
         System.out.println();
@@ -47,28 +46,28 @@ public class main {
 
 
 
-        playerChar ex2 = new playerChar("lam-ang");
+        playerChar char2 = new playerChar("lam-ang");
         System.out.println("2: LAM-ANG, THE BLESSED.");
         System.out.println("STYLE: ");
-        System.out.print("STATS: " + ex2.atk);
+        System.out.print("STATS: " + char2.atk);
         getUnicode("2694");
-        System.out.print(" "+ex2.def);
+        System.out.print(" "+char2.def);
         getUnicode("26E8");
-        System.out.print(" "+ex2.hp);
+        System.out.print(" "+char2.hp);
         getUnicode("2661");
         System.out.println();
         System.out.println();
 
 
 
-        playerChar ex3 = new playerChar("bernardo");
+        playerChar char3 = new playerChar("bernardo");
         System.out.println("3: BERNARDO, THE STRONGMAN.");
         System.out.println("STYLE: ");
-        System.out.print("STATS: " + ex3.atk);
+        System.out.print("STATS: " + char3.atk);
         getUnicode("2694");
-        System.out.print(" "+ex3.def);
+        System.out.print(" "+char3.def);
         getUnicode("26E8");
-        System.out.print(" "+ex3.hp);
+        System.out.print(" "+char3.hp);
         getUnicode("2661");
         System.out.println();
         System.out.println();
@@ -88,7 +87,7 @@ public class main {
 
         System.out.println("Good choice!"); 
         String location1 = locations[main.nextLocation()].toUpperCase();
-        System.out.println("The first location you travel to is a " + location1 + ".");
+        System.out.println("You travel to a " + location1 + ".");
         enemy enm1 = new enemy(enemyList.get(main.nextEnemy(location1)));
         System.out.println("You notice an enemy has appeared. It's a " + enm1.name + "!");
 
@@ -97,6 +96,7 @@ public class main {
             System.out.println("Type ATTACK to attack the enemy. Type DEFEND to raise your defense. Type HEAL to increase your health. Type SCOUT to view the enemy's info.");
             userChoice = sc.nextLine().toLowerCase();
             System.out.println();
+            // input sanitization again
             while (!userChoice.equals("attack") && !userChoice.equals("defend") && !userChoice.equals("scout") && !userChoice.equals("heal")) {
                 System.out.println("Please enter ATTACK, DEFEND, HEAL, or SCOUT to continue.");
                 userChoice = sc.nextLine().toLowerCase();
@@ -108,7 +108,7 @@ public class main {
                 if (enm1.hp > 0) {
                     System.out.println("You strike the " + enm1.name + " for " + pcDmg + " damage. It now has " + enm1.hp + " health left.");
                 } else if (enm1.hp <= 0) {
-                    enm1.hp = 0;
+                    enm1.hp = 0; // so that enemy hp isn't a negative value
                     System.out.println("You strike the " + enm1.name + " for " + pcDmg + " damage, defeating it!");
                     break;
                 }
@@ -131,6 +131,7 @@ public class main {
 
             System.out.println("You now have " + pc.hp + " health.");
 
+            // checks remaining player health after enemy attack and breaks loop if health is 0
             if (pc.hp <= 0) {
                 System.out.println("You have been defeated.");
                 break;
@@ -168,6 +169,9 @@ public class main {
         }
     }
 
+    // this function returns specifix indices of enemyList based on which location was
+    // randomized with the function above. the White Lady at the last index has a much 
+    // lower chance to appear as she is the hardest enemy
     public static int nextEnemy(String location) {
         Random rand = new Random();
         int randInt = rand.nextInt(101);
