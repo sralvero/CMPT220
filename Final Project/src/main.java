@@ -33,7 +33,7 @@ public class main {
         // will be created later
         playerChar char1 = new playerChar("urduja");
         System.out.println("1: URDUJA, THE WARRIOR. The legendary warrior princess and matriarch of Tawalisi. The leader of famed female warriors known as the Kinalakian, she never married, as she never met a man who could best her in a fight.");
-        System.out.println("STYLE: Well-rounded. Trained in strategy. Equal on offense and defense.");
+        System.out.println("STYLE: Well-rounded. Equal on offense and defense.");
         System.out.print("STATS: " + char1.atk);
         getUnicode("2694");
         System.out.print(" "+char1.def);
@@ -47,8 +47,8 @@ public class main {
 
 
         playerChar char2 = new playerChar("lam-ang");
-        System.out.println("2: LAM-ANG, THE BLESSED.");
-        System.out.println("STYLE: ");
+        System.out.println("2: LAM-ANG, THE BLESSED. An extraordinary child blessed with language at birth, accompanied by two magical animals on a quest to find his father.");
+        System.out.println("STYLE: Strong, but fragile. Don't let enemies in too close.");
         System.out.print("STATS: " + char2.atk);
         getUnicode("2694");
         System.out.print(" "+char2.def);
@@ -61,8 +61,8 @@ public class main {
 
 
         playerChar char3 = new playerChar("bernardo");
-        System.out.println("3: BERNARDO, THE STRONGMAN.");
-        System.out.println("STYLE: ");
+        System.out.println("3: BERNARDO, THE STRONGMAN. A man of incredible strength. It is said he could cause earthquakes simply by shrugging his shoulders.");
+        System.out.println("STYLE: Doesn't hit the hardest, but has amazing endurance.");
         System.out.print("STATS: " + char3.atk);
         getUnicode("2694");
         System.out.print(" "+char3.def);
